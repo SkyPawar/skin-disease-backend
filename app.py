@@ -129,7 +129,7 @@ def home():
 # def serve_static(path):
 #     return send_from_directory(app.static_folder, path)
 
-IMG_URL = "http://13.233.3.108/"
+IMG_URL = "http://127.0.0.1:5000/"
 
 @app.route("/upload_base64", methods=["POST"])
 def upload_base64():
