@@ -21,15 +21,15 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 app.secret_key = "supersecretkey"  # Required for session management
 
-# model_path = "model/skin_disease_model.h5"
-model_path = "/home/ubuntu/skin-disease-backend/model/skin_disease_model.h5"
+model_path = "model/skin_disease_model.h5"
+# model_path = "/home/ubuntu/skin-disease-backend/model/skin_disease_model.h5"
 
 if not os.path.exists(model_path):
     print(f"❌ Model file missing: {model_path}")
 else:
     # print("✅ Model found! Loading...")
     model = tf.keras.models.load_model(model_path)
-    # print("✅ Model Loaded Successfully!")
+    print("✅ Model Loaded Successfully!")
 
 
 # Class Labels
@@ -129,7 +129,7 @@ def home():
 # def serve_static(path):
 #     return send_from_directory(app.static_folder, path)
 
-IMG_URL = "http://127.0.0.1:5000/"
+IMG_URL = "http://13.232.98.98:5000/"
 
 @app.route("/upload_base64", methods=["POST"])
 def upload_base64():
