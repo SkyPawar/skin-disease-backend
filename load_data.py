@@ -11,9 +11,7 @@ def load_data(data_dir, img_size=(224, 224), batch_size=32):
         shear_range=0.2,
         zoom_range=0.2,
         horizontal_flip=True,
-        # vertical_flip=True,
         brightness_range=[0.8, 1.2],  # Vary brightness
-        # channel_shift_range=30.0,
         validation_split=0.2
     )
 
